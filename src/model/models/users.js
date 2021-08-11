@@ -8,7 +8,8 @@ const userSchema = new Schema({
     password: String,
     roles: [
         String
-    ]
+    ],
+    more: Schema.Types.Mixed
 });
 
 function createUsersModel() {

@@ -18,8 +18,6 @@ async function main() {
     server.use(helmet());
     server.use(express.json());
     server.use(express.urlencoded({extended: false}));
-    server.set('views', 'src/views')
-    server.set('view engine', 'pug');
 
     const {
         DB_HOST,

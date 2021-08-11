@@ -9,7 +9,9 @@ function connect(host, port, database) {
             useUnifiedTopology: true
         });
         const db = mongoose.connection;
+
         db.on('error', reject);
+        
         db.once('open', function() {
             console.log('Db is ready...')
             const Users = createUsersModel();
